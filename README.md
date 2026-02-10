@@ -67,6 +67,21 @@ Ink & Ember is built on a few simple principles:
 
 ---
 
+## Foundry VTT Integration (Planned)
+
+Ink & Ember is being designed with **Foundry Virtual Tabletop** integration in mind.
+
+The goal is to allow creators to move cleanly between **worldbuilding canon** and **tabletop play** without duplicating work:
+
+- Link Ink & Ember articles to Foundry entities (Actors, Items, Journals, Scenes, Roll Tables)
+- Export structured data for use in Foundry compendiums and handouts
+- Publish or sync selected lore based on visibility rules (public knowledge, secrets, spoilers)
+- Support campaign logs and chronicles that reference Foundry sessions and outcomes
+
+This integration will be **optional**. Ink & Ember remains fully usable as a standalone worldbuilding platform.
+
+---
+
 ## Article Types
 
 Ink & Ember supports a wide range of article categories, including but not limited to:
@@ -162,4 +177,3 @@ Creator ownership and data portability are core design goals.
 **Ink & Ember**  
 Ink for what is written.  
 Ember for what continues to burn.
-
