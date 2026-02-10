@@ -1,0 +1,396 @@
+{
+  "identity": {
+    "name": "Ink & Ember",
+    "mission": "An offline-first worldbuilding and narrative management platform for archivists, DMs, and writers — with optional online collaboration and Foundry VTT integration.",
+    "positioning": {
+      "offline_first": true,
+      "optional_online_collab": true,
+      "license_model": "One-time purchase",
+      "price_point_usd": 80,
+      "device_limit": 5,
+      "maintenance_philosophy": "Self-contained. No required server, no subscriptions, no forced logins."
+    },
+    "aesthetic": "Archival, Atmospheric, Tactile, Focused",
+    "brand_keywords": [
+      "ink",
+      "paper",
+      "embers",
+      "wax",
+      "vellum",
+      "bindings",
+      "marginalia",
+      "catalog cards",
+      "artifact labels"
+    ],
+    "anti_patterns": [
+      "Generic SaaS gradients",
+      "Flat, soulless material design",
+      "Gamified 'XP' bars or social badges",
+      "Overly rounded 'bubbly' UI",
+      "Endless onboarding wizards",
+      "Cloud-first dark patterns (forced accounts, forced sync, forced telemetry)"
+    ]
+  },
+  "product_principles": {
+    "rules": [
+      "Offline-first is non-negotiable: everything works without internet.",
+      "Online collaboration is an opt-in enhancement, never a requirement.",
+      "No feature may require an account unless it is explicitly a collaboration feature.",
+      "The app should feel like handling an artifact: tactile, deliberate, readable.",
+      "Prioritize clarity over cleverness. Prefer fewer UI elements with stronger meaning.",
+      "Fast local search is a core feature, not a nice-to-have."
+    ],
+    "tone": {
+      "voice": "quietly confident, archivist-friendly, never corporate",
+      "microcopy": [
+        "Use verbs that feel physical: 'Catalog', 'Bind', 'Annotate', 'Index', 'Seal'.",
+        "Avoid startup-y language: 'Optimize', 'Leverage', 'Scale your workflow'.",
+        "Errors should be calm and actionable, not snarky."
+      ]
+    }
+  },
+  "typography": {
+    "font_families": {
+      "headings": {
+        "fantasy": "Cormorant Garamond, serif",
+        "scifi": "Space Grotesk, sans-serif",
+        "default": "Cinzel, serif"
+      },
+      "body": {
+        "default": "Inter, sans-serif",
+        "reading": "Merriweather, serif"
+      },
+      "handwriting": "Caveat, cursive",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "rules": [
+      "Use 'Cormorant Garamond' for article titles in Fantasy/Archivist themes.",
+      "Use 'Space Grotesk' for headers in Void theme.",
+      "Do NOT use Inter for headings.",
+      "Body text must be at least 16px (text-base).",
+      "Long-form content (Manuscripts) must use 'Merriweather' with leading-relaxed.",
+      "Use 'Caveat' for user notes/annotations to simulate marginalia.",
+      "Use JetBrains Mono for IDs, hashes, code blocks, Foundry UUIDs, and export logs."
+    ],
+    "scale": {
+      "title": "text-3xl md:text-4xl",
+      "h1": "text-2xl md:text-3xl",
+      "h2": "text-xl md:text-2xl",
+      "h3": "text-lg md:text-xl",
+      "body": "text-base",
+      "small": "text-sm",
+      "meta": "text-xs"
+    }
+  },
+  "colors": {
+    "themes": {
+      "ink_and_ember": {
+        "type": "dark",
+        "description": "Default brand theme. Deep obsidian blacks with ember-orange accents.",
+        "palette": {
+          "background": "#0a0a0a",
+          "foreground": "#e5e5e5",
+          "card": "#121212",
+          "card_foreground": "#ffffff",
+          "primary": "#ff4500",
+          "primary_foreground": "#ffffff",
+          "secondary": "#1f1f1f",
+          "secondary_foreground": "#a0a0a0",
+          "accent": "#ff6b35",
+          "border": "#2a2a2a",
+          "muted": "#404040",
+          "danger": "#ef4444",
+          "warning": "#f59e0b",
+          "success": "#22c55e",
+          "focus_ring": "#ff6b35"
+        }
+      },
+      "the_archivist": {
+        "type": "light",
+        "description": "Paper-like warmth. Iron-gall browns, vellum whites, bookbinding accents.",
+        "palette": {
+          "background": "#fdfbf7",
+          "foreground": "#2c241b",
+          "card": "#f4f1ea",
+          "card_foreground": "#2c241b",
+          "primary": "#8b4513",
+          "primary_foreground": "#ffffff",
+          "secondary": "#e6e2d8",
+          "secondary_foreground": "#5c4d3c",
+          "accent": "#d2691e",
+          "border": "#dcd6cc",
+          "muted": "#8c7b6c",
+          "danger": "#b91c1c",
+          "warning": "#b45309",
+          "success": "#166534",
+          "focus_ring": "#8b4513"
+        }
+      },
+      "void_state": {
+        "type": "dark",
+        "description": "High-contrast sci-fi/terminal. Sharp corners, neon accents, precision UI.",
+        "palette": {
+          "background": "#000000",
+          "foreground": "#e0e0e0",
+          "card": "#050505",
+          "card_foreground": "#00ff9d",
+          "primary": "#00ff9d",
+          "primary_foreground": "#000000",
+          "secondary": "#0a0a0a",
+          "secondary_foreground": "#00bfff",
+          "accent": "#ff00ff",
+          "border": "#333333",
+          "muted": "#666666",
+          "danger": "#ff3b3b",
+          "warning": "#ffd23f",
+          "success": "#00ff9d",
+          "focus_ring": "#00ff9d"
+        }
+      },
+      "faewild": {
+        "type": "dark",
+        "description": "Organic, mysterious, deep forest tones with gilded highlights.",
+        "palette": {
+          "background": "#0f1a15",
+          "foreground": "#e2e8f0",
+          "card": "#16261f",
+          "card_foreground": "#f0fdf4",
+          "primary": "#10b981",
+          "primary_foreground": "#ffffff",
+          "secondary": "#1f382e",
+          "secondary_foreground": "#98fb98",
+          "accent": "#d4af37",
+          "border": "#2d4a3e",
+          "muted": "#4b6b5d",
+          "danger": "#ef4444",
+          "warning": "#f59e0b",
+          "success": "#10b981",
+          "focus_ring": "#d4af37"
+        }
+      }
+    }
+  },
+  "visual_enhancers": {
+    "textures": [
+      "Add a subtle noise overlay (opacity 0.03) to all backgrounds to prevent digital flatness.",
+      "Use 'ink splash' masks for images in Ink & Ember theme.",
+      "Use 'paper grain' patterns for The Archivist theme.",
+      "Void theme: allow scanline/noise at very low opacity (<= 0.02) but never gradients."
+    ],
+    "borders": [
+      "Ink & Ember: 1px solid #2a2a2a with subtle ember glow on active elements.",
+      "Archivist: Double borders for 'important' documents to mimic leather binding.",
+      "Void: 1px solid #333333, no radius (sharp corners).",
+      "Faewild: 1px solid #2d4a3e with faint gold highlight on hover."
+    ],
+    "radius": {
+      "default": "rounded-2xl",
+      "card": "rounded-2xl",
+      "void": "rounded-none",
+      "buttons": "rounded-xl"
+    },
+    "shadows": [
+      "Ink & Ember: deep ambient shadows (shadow-2xl).",
+      "Archivist: soft warm shadows (shadow-md) with low opacity.",
+      "Void: minimal shadows; rely on borders and contrast.",
+      "Faewild: soft shadow plus slight inner glow for magical emphasis (subtle)."
+    ]
+  },
+  "motion": {
+    "rules": [
+      "Animations must be subtle and purposeful (no bouncy UI).",
+      "Respect prefers-reduced-motion (disable non-essential motion).",
+      "Use 150–220ms for micro-interactions, 250–350ms for page transitions."
+    ],
+    "patterns": [
+      "Image zoom on hover for article covers (scale 1.02–1.05).",
+      "Popover fade + slight lift for tooltips and timeline details.",
+      "Sidebar accordion: height transition + opacity."
+    ]
+  },
+  "layout_strategies": {
+    "wiki_container": {
+      "structure": "Sidebar (250px fixed) + Main Content (fluid) + Infobox (300px hidden on mobile)",
+      "rules": [
+        "Main content max-width: 80ch for optimal reading.",
+        "Infobox floats right on desktop, stacks at bottom on mobile.",
+        "Breadcrumbs are mandatory for deep navigation.",
+        "Every page must have a 'Last Edited' + 'Location' meta line (even offline)."
+      ]
+    },
+    "dashboard_bento": {
+      "grid": "grid-cols-1 md:grid-cols-4 gap-4",
+      "items": [
+        "Recent Articles (col-span-2)",
+        "Campaign Status (col-span-1)",
+        "Quick Notes (col-span-1)",
+        "World Map Preview (col-span-4 h-64)"
+      ],
+      "rules": [
+        "Prefer fewer, larger cards. Avoid dense widgets.",
+        "Each card gets a single primary action."
+      ]
+    },
+    "timeline_view": {
+      "style": "Horizontal scroll container with sticky 'Era' headers.",
+      "interaction": "Pinch-to-zoom or slider to change granularity (Century -> Year -> Day).",
+      "rules": [
+        "Events must be readable at a glance: date, title, type badge.",
+        "Hover reveals summary; click opens full entry panel."
+      ]
+    },
+    "library_view": {
+      "style": "Index-card catalog list with filters and fast keyboard navigation.",
+      "rules": [
+        "Search bar always visible on desktop.",
+        "Cmd/Ctrl+K opens global search palette.",
+        "Results show type, tags, last edited, and parent path."
+      ]
+    }
+  },
+  "components": {
+    "ArticleCard": {
+      "path": "src/components/custom/ArticleCard.js",
+      "description": "Card with image cover, title, type badge, and 'last edited' meta.",
+      "style": "Overflow hidden, image zoom on hover, strong typography."
+    },
+    "TimelineNode": {
+      "path": "src/components/custom/TimelineNode.js",
+      "description": "Point on the timeline. Hover reveals summary popover.",
+      "style": "Circle marker with connecting line. Color coded by 'Event Type'."
+    },
+    "WikiSidebar": {
+      "path": "src/components/custom/WikiSidebar.js",
+      "description": "Collapsible tree navigation for article categories.",
+      "style": "Sticky position. Accordion style for categories."
+    },
+    "ThemeSwitcher": {
+      "path": "src/components/custom/ThemeSwitcher.js",
+      "description": "Dropdown to select one of the themes.",
+      "location": "Settings page or User Menu."
+    },
+    "GlobalSearch": {
+      "path": "src/components/custom/GlobalSearch.js",
+      "description": "Cmd/Ctrl+K command palette for instant navigation and creation.",
+      "style": "Centered modal, fast results, keyboard-first."
+    },
+    "FoundryExportPanel": {
+      "path": "src/components/custom/FoundryExportPanel.js",
+      "description": "Export and package selected entities for Foundry VTT integration.",
+      "style": "Step-by-step but minimal; shows warnings, UUID mapping, and output logs."
+    }
+  },
+  "offline_first_architecture": {
+    "storage": {
+      "default": "Local project vault stored on device.",
+      "rules": [
+        "All reads/writes must succeed offline.",
+        "Autosave is required, with local version snapshots.",
+        "Provide a clear manual 'Export Vault' action."
+      ]
+    },
+    "sync_and_collab": {
+      "mode": "Optional",
+      "rules": [
+        "Collaboration features must be clearly labeled as 'Online'.",
+        "Never block editing if sync fails; queue changes locally.",
+        "Conflicts must be readable and resolvable (diff view)."
+      ]
+    },
+    "privacy": {
+      "rules": [
+        "No telemetry by default.",
+        "If analytics exist, they must be opt-in and local-first (prefer local logs).",
+        "Never upload user content without explicit action."
+      ]
+    }
+  },
+  "foundry_vtt_integration": {
+    "goals": [
+      "Export lore entities as Foundry-ready compendium packs or JSON payloads.",
+      "Preserve stable IDs/UUID mappings for re-import and updates.",
+      "Support image assets packaging with references maintained."
+    ],
+    "ui_rules": [
+      "Foundry tools live under a dedicated 'Integrations' area.",
+      "Show clear compatibility notes per Foundry version/system target.",
+      "Provide a dry-run validation step before export."
+    ],
+    "terminology": [
+      "Use 'Pack' and 'Compendium' consistently.",
+      "Expose UUIDs in a monospace style.",
+      "Warn about breaking changes when renaming IDs."
+    ]
+  },
+  "assets": {
+    "image_urls": {
+      "textures": [
+        {
+          "url": "https://images.unsplash.com/photo-1622405538251-e8c48fdc40db?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Yellow/White Smoke (Ink Theme Hero Background)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1621791554791-cb212a4a55a6?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Blue Smoke (Void Theme Accent)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1706271952285-01b5e3fc2d78?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Wrinkled Paper (Archivist Theme Background)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1576163877452-1891b0cbb93c?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Ember Sparks (Ink & Ember Accent)",
+          "category": "texture"
+        }
+      ],
+      "placeholders": [
+        {
+          "url": "https://images.unsplash.com/photo-1634720092181-7b4a5908c5d5?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Book Restoration (Generic Article Cover)",
+          "category": "placeholder"
+        }
+      ]
+    },
+    "icons": {
+      "library": "lucide-react",
+      "mappings": {
+        "Article": "BookOpen",
+        "Map": "Map",
+        "Timeline": "History",
+        "Character": "User",
+        "Settings": "Settings",
+        "Calendar": "Calendar",
+        "FamilyTree": "GitFork",
+        "Search": "Search",
+        "Export": "Package",
+        "Integrations": "Plug"
+      }
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Avoid 'AI Slop': no generic gradients, no Inter for headings.",
+      "Dark colors must be solid + subtle noise, not gradients.",
+      "Use 2–3x more spacing than typical SaaS apps.",
+      "All interactive elements must have data-testid.",
+      "Use sonner for toasts.",
+      "Prefer keyboard-first UX for power features (search, create, navigate)."
+    ],
+    "accessibility": [
+      "Meet APCA contrast targets (and WCAG as a baseline).",
+      "All interactive elements must have visible focus states.",
+      "Support prefers-reduced-motion.",
+      "Ensure readable line length (max 80ch) and comfortable line-height."
+    ],
+    "engineering": [
+      "Theme tokens must be CSS variables (no hard-coded colors in components).",
+      "Components must be theme-agnostic by default.",
+      "Never block on network for core flows.",
+      "Provide deterministic exports (same inputs => same output)."
+    ]
+  },
+  "instructions_to_main_agent": "Implement themes using CSS variables in index.css plus a ThemeContext. Default to 'ink_and_ember'. Build the Wiki layout as the core navigation structure with breadcrumbs. Treat offline-first storage as the default path; online collaboration must be opt-in and non-blocking. Add a Foundry export panel under Integrations with dry-run validation, UUID display, and deterministic outputs."
+}
