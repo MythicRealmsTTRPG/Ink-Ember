@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
+import { ThemeSwitcher } from "@/components/custom/ThemeSwitcher";
 
-const BACKEND_URL =
-  process.env.REACT_APP_BACKEND_URL ?? "http://localhost:8000";
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL ?? "http://localhost:8000";
 const API = `${BACKEND_URL}/api`;
 
 function Home() {
@@ -22,20 +22,16 @@ function Home() {
   }, []);
 
   return (
-    <header className="App-header">
-      <a
-        className="App-link"
-        href="https://emergent.sh"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"
-          alt="Emergent"
-        />
-      </a>
-      <p className="mt-5">Building something incredible ~!</p>
-    </header>
+    <div className="min-h-screen flex flex-col items-center justify-center gap-6">
+      <ThemeSwitcher />
+
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-heading">Ink & Ember</h1>
+        <p className="text-muted-foreground">
+          Offline-first worldbuilding and narrative management.
+        </p>
+      </div>
+    </div>
   );
 }
 
