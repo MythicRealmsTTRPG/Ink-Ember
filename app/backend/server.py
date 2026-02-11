@@ -503,7 +503,7 @@ async def patch_world(world_id: str, payload: WorldUpdate):
     update_data["updated_at"] = utc_now_iso()
 
     await db.worlds.update_one({"id": world_id}, {"$set": update_data})
-    return await db.worlds.find_one({"id": world_id}, {"_id": 0)
+    return await db.worlds.find_one({"id": world_id}, {"_id": 0})
 
 
 # Optional compatibility PUT (same behavior as PATCH but expects a "full-ish" payload)
@@ -590,7 +590,7 @@ async def patch_article(article_id: str, payload: ArticleUpdate):
     update_data["updated_at"] = utc_now_iso()
 
     await db.articles.update_one({"id": article_id}, {"$set": update_data})
-    return await db.articles.find_one({"id": article_id}, {"_id": 0)
+    return await db.articles.find_one({"id": article_id}, {"_id": 0})
 
 
 @api_router.put("/articles/{article_id}", response_model=Article)
@@ -642,7 +642,7 @@ async def patch_timeline(timeline_id: str, payload: TimelineUpdate):
     update_data["updated_at"] = utc_now_iso()
 
     await db.timelines.update_one({"id": timeline_id}, {"$set": update_data})
-    return await db.timelines.find_one({"id": timeline_id}, {"_id": 0)
+    return await db.timelines.find_one({"id": timeline_id}, {"_id": 0})
 
 
 @api_router.put("/timelines/{timeline_id}", response_model=Timeline)
@@ -1106,7 +1106,7 @@ async def patch_diplomatic_relation(relation_id: str, payload: DiplomaticRelatio
 
     update_data = non_null_update(payload)
     await db.diplomatic_relations.update_one({"id": relation_id}, {"$set": update_data})
-    return await db.diplomatic_relations.find_one({"id": relation_id}, {"_id": 0)
+    return await db.diplomatic_relations.find_one({"id": relation_id}, {"_id": 0})
 
 
 @api_router.delete("/diplomatic-relations/{relation_id}")
