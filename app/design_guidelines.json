@@ -147,25 +147,89 @@
           "focus_ring": "#00ff9d"
         }
       },
-      "faewild": {
-        "type": "dark",
-        "description": "Organic, mysterious, deep forest tones with gilded highlights.",
+      "ivory_codex": {
+        "type": "light",
+        "description": "Daylight vellum and iron-gall ink. Designed for writing and print clarity.",
         "palette": {
-          "background": "#0f1a15",
-          "foreground": "#e2e8f0",
-          "card": "#16261f",
-          "card_foreground": "#f0fdf4",
-          "primary": "#10b981",
+          "background": "#fbf9f3",
+          "foreground": "#2b2118",
+          "card": "#f1ede3",
+          "card_foreground": "#2b2118",
+          "primary": "#704214",
           "primary_foreground": "#ffffff",
-          "secondary": "#1f382e",
-          "secondary_foreground": "#98fb98",
-          "accent": "#d4af37",
-          "border": "#2d4a3e",
-          "muted": "#4b6b5d",
+          "secondary": "#e4dfd2",
+          "secondary_foreground": "#5a4633",
+          "accent": "#a0522d",
+          "border": "#d3ccbe",
+          "muted": "#7a6a59",
+          "danger": "#9f1d1d",
+          "warning": "#9a5a11",
+          "success": "#1f5f3a",
+          "focus_ring": "#704214"
+        }
+      }
+
+      "fae": {
+        "type": "dark",
+        "description": "Liminal, ancient, and otherworldly. Moonlit forests, bioluminescence, and cold gold accents.",
+        "palette": {
+          "background": "#0b1411",
+          "foreground": "#e6efe9",
+          "card": "#13201b",
+          "card_foreground": "#f0fdf4",
+          "primary": "#2dd4bf",
+          "primary_foreground": "#04110d",
+          "secondary": "#1f332b",
+          "secondary_foreground": "#9de3c2",
+          "accent": "#d6b25e",
+          "border": "#2a4a3d",
+          "muted": "#5f7f72",
           "danger": "#ef4444",
-          "warning": "#f59e0b",
-          "success": "#10b981",
-          "focus_ring": "#d4af37"
+          "warning": "#fbbf24",
+          "success": "#34d399",
+          "focus_ring": "#d6b25e"
+        }
+      },
+      "field_notes": {
+        "type": "light",
+        "description": "Working notebook mode. Pencil, graphite, and practical paper tones for fast writing.",
+        "palette": {
+          "background": "#f7f6f2",
+          "foreground": "#2a2a28",
+          "card": "#ffffff",
+          "card_foreground": "#2a2a28",
+          "primary": "#4b5563",
+          "primary_foreground": "#ffffff",
+          "secondary": "#e5e7eb",
+          "secondary_foreground": "#374151",
+          "accent": "#6b7280",
+          "border": "#d1d5db",
+          "muted": "#9ca3af",
+          "danger": "#991b1b",
+          "warning": "#92400e",
+          "success": "#166534",
+          "focus_ring": "#4b5563"
+        }
+      },
+      "cinder": {
+        "type": "dark",
+        "description": "Burnt parchment and dying embers. For grim histories and fallen empires.",
+        "palette": {
+          "background": "#0c0b0a",
+          "foreground": "#e0dad2",
+          "card": "#151311",
+          "card_foreground": "#f2ede8",
+          "primary": "#c2410c",
+          "primary_foreground": "#ffffff",
+          "secondary": "#1f1c19",
+          "secondary_foreground": "#b5a89c",
+          "accent": "#9a3412",
+          "border": "#2a2521",
+          "muted": "#6b625a",
+          "danger": "#dc2626",
+          "warning": "#d97706",
+          "success": "#4d7c5f",
+          "focus_ring": "#c2410c"
         }
       }
     }
