@@ -1,0 +1,10 @@
+/* App.css
+   Global app shell styles only.
+   Theme, layout, and typography are handled elsewhere.
+*/
+
+.App {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--foreground);
+}
