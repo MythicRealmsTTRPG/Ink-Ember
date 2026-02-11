@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Caveat:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* =========================================================
+     Theme Tokens (CSS Variables)
+     - Default theme is ink_and_ember
+     - Components consume tokens via: hsl(var(--token))
+     ========================================================= */
+
+  :root,
+  [data-theme="ink_and_ember"] {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 63%;
+
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 16 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 16 100% 50%;
+
+    /* Rounded-2xl ≈ 1rem */
+    --radius: 1rem;
+
+    /* Optional chart tokens */
+    --chart-1: 16 100% 50%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --font-heading: "Cinzel", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="the_archivist"] {
+    --background: 40 60% 98%;
+    --foreground: 32 24% 14%;
+
+    --card: 39 25% 94%;
+    --card-foreground: 32 24% 14%;
+
+    --popover: 39 25% 94%;
+    --popover-foreground: 32 24% 14%;
+
+    --primary: 25 76% 31%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 22% 87%;
+    --secondary-foreground: 30 13% 30%;
+
+    --muted: 28 13% 49%;
+    --muted-foreground: 28 13% 41%;
+
+    --accent: 25 75% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 42%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 37 19% 83%;
+    --input: 37 19% 83%;
+    --ring: 25 76% 31%;
+
+    --radius: 1rem;
+
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="void_state"] {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 88%;
+
+    --card: 0 0% 2%;
+    --card-foreground: 157 100% 50%;
+
+    --popover: 0 0% 2%;
+    --popover-foreground: 157 100% 50%;
+
+    --primary: 157 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 4%;
+    --secondary-foreground: 195 100% 50%;
+
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 300 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 100% 62%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 157 100% 50%;
+
+    /* Void theme: sharp corners */
+    --radius: 0rem;
+
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Inter", sans-serif;
+    --font-handwriting: "JetBrains Mono", monospace;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="ivory_codex"] {
+    --background: 45 50% 97%;
+    --foreground: 28 28% 13%;
+
+    --card: 40 25% 91%;
+    --card-foreground: 28 28% 13%;
+
+    --popover: 40 25% 91%;
+    --popover-foreground: 28 28% 13%;
+
+    --primary: 30 70% 26%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 25% 86%;
+    --secondary-foreground: 29 25% 28%;
+
+    --muted: 31 16% 41%;
+    --muted-foreground: 31 16% 34%;
+
+    --accent: 19 56% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 68% 37%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 19% 79%;
+    --input: 40 19% 79%;
+    --ring: 30 70% 26%;
+
+    --radius: 1rem;
+
+    --font-heading: "Cinzel", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="fae"] {
+    --background: 160 29% 6%;
+    --foreground: 140 22% 92%;
+
+    --card: 156 23% 10%;
+    --card-foreground: 120 100% 97%;
+
+    --popover: 156 23% 10%;
+    --popover-foreground: 120 100% 97%;
+
+    --primary: 172 66% 50%;
+    --primary-foreground: 160 46% 4%;
+
+    --secondary: 156 24% 16%;
+    --secondary-foreground: 145 53% 75%;
+
+    --muted: 156 14% 44%;
+    --muted-foreground: 156 14% 58%;
+
+    --accent: 42 59% 60%;
+    --accent-foreground: 160 46% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 156 28% 23%;
+    --input: 156 28% 23%;
+    --ring: 42 59% 60%;
+
+    --radius: 1rem;
+
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="field_notes"] {
+    --background: 48 24% 96%;
+    --foreground: 60 2% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 60 2% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 2% 16%;
+
+    --primary: 215 14% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 215 13% 23%;
+
+    --muted: 218 11% 65%;
+    --muted-foreground: 218 11% 48%;
+
+    --accent: 220 9% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 69% 35%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 216 12% 84%;
+    --input: 216 12% 84%;
+    --ring: 215 14% 34%;
+
+    --radius: 1rem;
+
+    --font-heading: "Cinzel", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  [data-theme="cinder"] {
+    --background: 30 9% 4%;
+    --foreground: 34 18% 85%;
+
+    --card: 30 12% 8%;
+    --card-foreground: 36 33% 94%;
+
+    --popover: 30 12% 8%;
+    --popover-foreground: 36 33% 94%;
+
+    --primary: 17 88% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 11% 11%;
+    --secondary-foreground: 34 18% 67%;
+
+    --muted: 28 9% 39%;
+    --muted-foreground: 28 9% 54%;
+
+    --accent: 15 79% 34%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 73% 48%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 27 12% 15%;
+    --input: 27 12% 15%;
+    --ring: 17 88% 40%;
+
+    --radius: 1rem;
+
+    --font-heading: "Cinzel", serif;
+    --font-body: "Inter", sans-serif;
+    --font-reading: "Merriweather", serif;
+    --font-handwriting: "Caveat", cursive;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  /* =========================================================
+     Global Base Styles
+     ========================================================= */
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-reading {
+    font-family: var(--font-reading);
+  }
+  .font-handwriting {
+    font-family: var(--font-handwriting);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Debug wrapper helper */
+  [data-debug-wrapper="true"] {
+    display: contents !important;
+  }
+
+  [data-debug-wrapper="true"] > * {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+    margin-bottom: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    gap: inherit;
+  }
+}
+
+/* =========================================================
+   Subtle Texture Overlays (NO gradients)
+   - Keeps everything tactile without "SaaS gloss"
+   ========================================================= */
+
+:root,
+[data-theme="ink_and_ember"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+[data-theme="the_archivist"],
+[data-theme="ivory_codex"],
+[data-theme="field_notes"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+[data-theme="void_state"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='scan'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23scan)' opacity='0.02'/%3E%3C/svg%3E");
+}
+
+[data-theme="fae"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='moss'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23moss)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+[data-theme="cinder"] {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='soot'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23soot)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* =========================================================
+   Custom Scrollbar (token-driven)
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* =========================================================
+   Wiki Content Styling (reading mode)
+   ========================================================= */
+
+.wiki-content {
+  font-family: var(--font-reading);
+  line-height: 1.8;
+  max-width: 80ch;
+}
+
+.wiki-content h1 {
+  @apply text-3xl font-bold mb-6 mt-8;
+  font-family: var(--font-heading);
+}
+
+.wiki-content h2 {
+  @apply text-2xl font-semibold mb-4 mt-6;
+  font-family: var(--font-heading);
+}
+
+.wiki-content h3 {
+  @apply text-xl font-medium mb-3 mt-5;
+  font-family: var(--font-heading);
+}
+
+.wiki-content p {
+  @apply mb-4;
+}
+
+.wiki-content ul,
+.wiki-content ol {
+  @apply mb-4 pl-6;
+}
+
+.wiki-content li {
+  @apply mb-2;
+}
+
+.wiki-content blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-4;
+}
+
+/* =========================================================
+   Motion (subtle, respects reduced motion)
+   ========================================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 180ms ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 220ms ease-out;
+}
+
+.stagger-1 {
+  animation-delay: 0.05s;
+}
+.stagger-2 {
+  animation-delay: 0.1s;
+}
+.stagger-3 {
+  animation-delay: 0.15s;
+}
+.stagger-4 {
+  animation-delay: 0.2s;
+}
+.stagger-5 {
+  animation-delay: 0.25s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .stagger-1,
+  .stagger-2,
+  .stagger-3,
+  .stagger-4,
+  .stagger-5 {
+    animation: none !important;
+  }
+}
+
+/* =========================================================
+   Sidebar + Badges (light utility classes)
+   ========================================================= */
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-3 py-2 rounded-md transition-colors;
+}
+
+.sidebar-link:hover {
+  @apply bg-secondary;
+}
+
+.sidebar-link.active {
+  @apply bg-primary/10 text-primary;
+}
+
+.article-type-badge {
+  @apply inline-flex items-center px-2 py-1 rounded text-xs font-medium;
+}
