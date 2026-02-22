@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: ink-ember-api
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      # point this at wherever your app expects the SQLite file
+      - DATABASE_URL=file:/data/ink-ember.sqlite
+    volumes:
+      # your source code (dev hot reload)
+      - .:/app
+      # persistent sqlite storage
+      - ink_ember_sqlite:/data
+    command: npm run dev
+
+volumes:
+  ink_ember_sqlite:
