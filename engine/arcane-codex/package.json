@@ -1,0 +1,20 @@
+{
+  "name": "@ink-ember/arcane-codex",
+  "version": "0.1.0",
+  "private": true,
+  "type": "commonjs",
+  "bin": {
+    "arcane": "./src/cli.cjs"
+  },
+  "scripts": {
+    "dev": "node src/cli.cjs",
+    "start": "node src/cli.cjs"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "esbuild": "^0.25.0",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}
