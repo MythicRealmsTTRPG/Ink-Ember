@@ -1,0 +1,279 @@
+{
+  "identity": {
+    "name": "Ink & Ember",
+    "mission": "A worldbuilding and narrative management platform for archivists, DMs, and writers.",
+    "aesthetic": "Archival, Atmospheric, Tactile, Focused",
+    "anti_patterns": [
+      "Generic SaaS gradients",
+      "Flat, soulless material design",
+      "Gamified 'XP' bars or social badges",
+      "Overly rounded 'bubbly' UI"
+    ]
+  },
+  "typography": {
+    "font_families": {
+      "headings": {
+        "fantasy": "Cormorant Garamond, serif",
+        "scifi": "Space Grotesk, sans-serif",
+        "default": "Cinzel, serif"
+      },
+      "body": {
+        "default": "Inter, sans-serif",
+        "reading": "Merriweather, serif"
+      },
+      "handwriting": "Caveat, cursive",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "rules": [
+      "Use 'Cormorant Garamond' for all Article Titles in Fantasy/Archivist themes.",
+      "Use 'Space Grotesk' for headers in Void theme.",
+      "Body text must be at least 16px (text-base) for readability.",
+      "Long-form content (Manuscripts) must use 'Merriweather' or similar serif with leading-relaxed.",
+      "Use 'Caveat' for user notes/annotations to simulate marginalia."
+    ]
+  },
+  "colors": {
+    "themes": {
+      "ink_and_ember": {
+        "type": "dark",
+        "description": "The default brand theme. Deep obsidian blacks with burning orange accents.",
+        "palette": {
+          "background": "#0a0a0a",
+          "foreground": "#e5e5e5",
+          "card": "#121212",
+          "card_foreground": "#ffffff",
+          "primary": "#ff4500",
+          "primary_foreground": "#ffffff",
+          "secondary": "#1f1f1f",
+          "secondary_foreground": "#a0a0a0",
+          "accent": "#ff6b35",
+          "border": "#2a2a2a",
+          "muted": "#404040"
+        }
+      },
+      "the_archivist": {
+        "type": "light",
+        "description": "Tactile, paper-like feel. Warm whites and iron-gall ink browns.",
+        "palette": {
+          "background": "#fdfbf7",
+          "foreground": "#2c241b",
+          "card": "#f4f1ea",
+          "card_foreground": "#2c241b",
+          "primary": "#8b4513",
+          "primary_foreground": "#ffffff",
+          "secondary": "#e6e2d8",
+          "secondary_foreground": "#5c4d3c",
+          "accent": "#d2691e",
+          "border": "#dcd6cc",
+          "muted": "#8c7b6c"
+        }
+      },
+      "cathedral": {
+        "type": "dark",
+        "description": "Gothic, grand, with a sense of reverence. Deep stone grays and stained glass jewel tones.",
+        "palette": {
+          "background": "#0c0c0e",
+          "foreground": "#e6e6e6",
+          "card": "#141417",
+          "card-foreground": "#ffffff",
+          "primary": "#b22222",
+          "primary-foreground": "#ffffff",
+          "secondary": "#1c1c21",
+          "secondary-foreground": "#bbbbbb",
+          "accent": "#d4af37", 
+          "border": "#2f2f35",
+          "muted": "#55555c"
+        }
+      },
+      "dawn": {
+        "type": "light",
+        "description": "Early morning study light. Calm, focused, warm neutrals with subtle sunrise accents.",
+        "palette": {
+          "background": "#fdfcf9",
+          "foreground": "#1f2937",
+          "card": "#f5f5f4",
+          "card-foreground": "#1f2937",
+          "primary": "#a855f7",
+          "primary-foreground": "#ffffff",
+          "secondary": "#e7e5e4",
+          "secondary-foreground": "#57534e",
+          "accent": "#fb923c",
+          "border": "#d6d3d1",
+          "muted": "#9ca3af"
+        }
+      },
+      "void_state": {
+        "type": "dark",
+        "description": "High contrast, sci-fi, terminal aesthetic. Pure blacks and neon.",
+        "palette": {
+          "background": "#000000",
+          "foreground": "#e0e0e0",
+          "card": "#050505",
+          "card_foreground": "#00ff9d",
+          "primary": "#00ff9d",
+          "primary_foreground": "#000000",
+          "secondary": "#0a0a0a",
+          "secondary_foreground": "#00bfff",
+          "accent": "#ff00ff",
+          "border": "#333333",
+          "muted": "#666666"
+        }
+      },
+      "ivory": {
+        "type": "light",
+        "description": "Illuminated manuscript aesthetic. Clean parchment tones with restrained ink and subtle gold.",
+        "palette": {
+          "background": "#f8f6f1",
+          "foreground": "#2b2b2b",
+          "card": "#ffffff",
+          "card-foreground": "#2b2b2b",
+          "primary": "#6b3f1d",
+          "primary-foreground": "#ffffff",
+          "secondary": "#ece8df",
+          "secondary-foreground": "#5b4f3f",
+          "accent": "#c28f2c",
+          "border": "#d8d2c7",
+          "muted": "#8a8074"
+        }
+      },
+      "fae": {
+        "type": "dark",
+        "description": "Organic, mysterious, deep forest tones.",
+        "palette": {
+          "background": "#0f1a15",
+          "foreground": "#e2e8f0",
+          "card": "#16261f",
+          "card_foreground": "#f0fdf4",
+          "primary": "#10b981",
+          "primary_foreground": "#ffffff",
+          "secondary": "#1f382e",
+          "secondary_foreground": "#98fb98",
+          "accent": "#d4af37",
+          "border": "#2d4a3e",
+          "muted": "#4b6b5d"
+        }
+      }
+    }
+  },
+  "visual_enhancers": {
+    "textures": [
+      "Add a subtle noise overlay (opacity 0.03) to all backgrounds to prevent digital flatness.",
+      "Use 'ink splash' masks for images in the Ink & Ember theme.",
+      "Use 'paper grain' background patterns for The Archivist theme."
+    ],
+    "borders": [
+      "Ink & Ember: 1px solid #2a2a2a with subtle orange glow on active elements.",
+      "Archivist: Double borders (3px) for 'important' documents to mimic leather binding.",
+      "Void: 1px solid #333333, no radius (sharp corners)."
+    ],
+    "shadows": [
+      "Ink & Ember: Deep, ambient shadows (shadow-2xl) colored #000000.",
+      "Archivist: Soft, warm shadows (shadow-md) colored #5c4d3c (opacity 0.1)."
+    ]
+  },
+  "layout_strategies": {
+    "wiki_container": {
+      "structure": "Sidebar (250px fixed) + Main Content (fluid) + Infobox (300px hidden on mobile)",
+      "rules": [
+        "Main content max-width: 80ch for optimal reading.",
+        "Infobox must float right on desktop, stack bottom on mobile.",
+        "Breadcrumbs are MANDATORY for deep navigation."
+      ]
+    },
+    "dashboard_bento": {
+      "grid": "grid-cols-1 md:grid-cols-4 gap-4",
+      "items": [
+        "Recent Articles (col-span-2)",
+        "Campaign Status (col-span-1)",
+        "Quick Notes (col-span-1)",
+        "World Map Preview (col-span-4 h-64)"
+      ]
+    },
+    "timeline_view": {
+      "style": "Horizontal scroll container with sticky 'Era' headers.",
+      "interaction": "Pinch-to-zoom or slider to change granularity (Century -> Year -> Day)."
+    }
+  },
+  "components": {
+    "ArticleCard": {
+      "path": "src/components/custom/ArticleCard.js",
+      "description": "Card with image cover, title, type badge, and 'last edited' meta.",
+      "style": "Overflow hidden, image zoom on hover."
+    },
+    "TimelineNode": {
+      "path": "src/components/custom/TimelineNode.js",
+      "description": "A point on the timeline. Hover reveals summary popover.",
+      "style": "Circle marker with connecting line. Color coded by 'Event Type'."
+    },
+    "WikiSidebar": {
+      "path": "src/components/custom/WikiSidebar.js",
+      "description": "Collapsible tree navigation for article categories.",
+      "style": "Sticky position. Accordion style for categories."
+    },
+    "ThemeSwitcher": {
+      "path": "src/components/custom/ThemeSwitcher.js",
+      "description": "Dropdown to select one of the 4 themes.",
+      "location": "Settings page or User Menu."
+    }
+  },
+  "assets": {
+    "image_urls": {
+      "textures": [
+        {
+          "url": "https://images.unsplash.com/photo-1622405538251-e8c48fdc40db?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Yellow/White Smoke (Ink Theme Hero Background)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1621791554791-cb212a4a55a6?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Blue Smoke (Void Theme Accent)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1706271952285-01b5e3fc2d78?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Wrinkled Paper (Archivist Theme Background)",
+          "category": "texture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1576163877452-1891b0cbb93c?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Ember Sparks (Ink & Ember Accent)",
+          "category": "texture"
+        }
+      ],
+      "placeholders": [
+        {
+          "url": "https://images.unsplash.com/photo-1634720092181-7b4a5908c5d5?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "description": "Book Restoration (Generic Article Cover)",
+          "category": "placeholder"
+        }
+      ]
+    },
+    "icons": {
+      "library": "lucide-react",
+      "mappings": {
+        "Article": "BookOpen",
+        "Map": "Map",
+        "Timeline": "History",
+        "Character": "User",
+        "Settings": "Settings",
+        "Calendar": "Calendar",
+        "FamilyTree": "GitFork"
+      }
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Avoid 'AI Slop': No generic gradients, no 'Inter' for headings.",
+      "Dark colors must be solid or subtle noise, NOT gradients.",
+      "Use 2-3x more spacing than typical SaaS apps.",
+      "All interactive elements must have `data-testid`.",
+      "Use `sonner` for toasts."
+    ],
+    "accessibility": [
+      "Ensure contrast ratios meet APCA standards.",
+      "Interactive elements must have visible focus states.",
+      "Support 'prefers-reduced-motion'."
+    ]
+  },
+  "instructions_to_main_agent": "Implement the 4 themes using CSS variables in `index.css` and a ThemeContext. Build the Wiki layout as the core navigation structure. Prioritize the 'Ink & Ember' theme as default. Use the provided image URLs for backgrounds and textures where appropriate."
+}
