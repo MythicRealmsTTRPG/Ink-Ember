@@ -1,0 +1,22 @@
+{
+  "name": "ink-ember-root",
+  "private": true,
+  "version": "0.5.0",
+  "workspaces": [
+    "engine/*"
+  ],
+  
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "dev:backend": "python -m uvicorn backend.server:app --reload --host 127.0.0.1 --port 8001",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently -n backend,frontend \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "python scripts/build_backend.py",
+    "desktop:dev": "npm --prefix desktop run dev",
+    "desktop:dist": "npm --prefix desktop run dist",
+    "build:desktop": "npm run build:frontend && npm run build:backend && npm run desktop:dist"
+  }
+}
